@@ -1,6 +1,8 @@
 // =================================================================================================================================
 /**
  * vmsim.c
+ * author: Prof. Scott F. Kaplan, Fall 2018
+ * updated: Prof. Lillian Pentecost, Fall 2022
  *
  * Allocate space that is then virtually mapped, page by page, to a simulated underlying space.  Maintain page tables and follow
  * their mappings with a simulated MMU.
