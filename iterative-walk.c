@@ -77,10 +77,10 @@ populate (vmsim_addr_t array, unsigned int length) {
   for (uint64_t i = 0; i < length; i += 1) {
 
     vmsim_addr_t addr = array + (i * sizeof(i));
-    vmsim_write(&i, addr, sizeof(i));
+    vmsim_write(&i, addr, sizeof(i)); // For every index of the array length, write addr of size (i) into the pointer to the index;
     if (debug) {
       uint64_t value;
-      vmsim_read(&value, addr, sizeof(value));
+      vmsim_read(&value, addr, sizeof(value)); // Read addr into the pointer to value so that value can be used to print the index's value
       fprintf(stderr,
 	      "DEBUG:\tpopulate():\t0x%x[%ld] = %ld\n",
 	      array,
@@ -109,11 +109,11 @@ traverse (vmsim_addr_t array, unsigned int length) {
   uint64_t sum = 0;
   for (uint64_t i = 0; i < length; i += 1) {
 
-    vmsim_addr_t addr = array + (i * sizeof(i));
+    vmsim_addr_t addr = array + (i * sizeof(i)); 
     uint64_t current;
-    vmsim_read(&current, addr, sizeof(current));
+    vmsim_read(&current, addr, sizeof(current)); // Take the simulated address addr, an address in the array, and load it into a pointer to current with sizeof(current) size; shows the current place in the array
     sum += current;
-    vmsim_write(&sum, addr, sizeof(sum));
+    vmsim_write(&sum, addr, sizeof(sum)); // Load the address at addr to a pointer to sum of size sum to the buffer; shows the current sum
     if (debug) {
       fprintf(stderr,
 	      "DEBUG:\ttraverse():\t0x%x[%ld] <- %ld -> %ld\n",
@@ -154,7 +154,7 @@ go (unsigned int length, unsigned int iterations) {
   // Show the final thing.
   uint64_t     value;
   vmsim_addr_t addr  = array + ((length - 1) * sizeof(value));
-  vmsim_read(&value, addr, sizeof(value));
+  vmsim_read(&value, addr, sizeof(value)); // Load final simulated address into the buffer
   printf("%ld\n", value);
   
   // Clean up.
