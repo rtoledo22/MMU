@@ -1,6 +1,6 @@
 CC            = gcc
 SPECIAL_FLAGS = -ggdb -Wall
-CFLAGS        = -std=gnu99 -fPIC
+CFLAGS        = -std=gnu99 -fPIC $(SPECIAL_FLAGS)
 
 all: libvmsim iterative-walk random-hop
 
