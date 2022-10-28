@@ -1,10 +1,20 @@
 [This is a template for your project collaboration document.  Please briefly answer the following questions in whatever format you'd lik. Try to stay within 500 words unless there is an issue/bug requiring additional explanation.]
 
 (1) Who did you collaborate with or recieve help/insight from during this project, and how did they help?
+I talked to Professor Pentecost multiple times, and went to office hours on both Tuesday and Thursday.
 
 (2) What went well for you in this project?
+After a certain point everything just clicked! It took me a day to do everything, and up to a certain point I understood what 80% of the code did.
 
 (3) What was challenging for you in this project?
+The entirety of time it took me to get to the point everything clicked. Conceptually it was tough to understand what was happening, though once I went to TA hours after office hours I had that moment of clarity.
 
 (4) Did you consult any online sources in developing the code you are submitting?  Please list any sources and how/why you used them.  Note that any code or bug-fixes directly used in your code should be well-commented *by you* to indicate your understanding.
 
+Uh... Let's see... I used Project 0, Project 1, and Project 2 instructions from the Moodle website.
+
+I used this to find out how to put command line arguments to use: https://stackoverflow.com/questions/6121094/how-do-i-run-a-program-with-commandline-arguments-using-gdb-within-a-bash-script
+
+I used this to understand bitmasking and bit augmentation in more detail, since I was getting confused with >> and <<: https://stackoverflow.com/questions/10493411/what-is-bit-masking#:~:text=Masking%20is%20the%20act%20of%20applying%20a%20mask,a%20subset%20of%20the%20bits%20in%20the%20value
+
+There were a lot of websites I used to try and understand 32-bit addresses and why my less-than-32-bit address was not being masked the way I thought it would, and there were a lot of websites to understand how to use gdb, for example how to enable the gdb to go through c code line by line via -g.
